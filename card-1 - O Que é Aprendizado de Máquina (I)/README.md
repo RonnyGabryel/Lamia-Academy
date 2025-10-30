@@ -6,4 +6,5 @@ Dois vídeos com uma introdução simples e didática do que é aprendizado de m
 
 **Vídeos:**
 https://youtu.be/1_c_MA1F-vU
+
 https://youtu.be/t5z5lyrb-7s?list=RDCMUC0rqucBdTuFTjJiefW5t-IQ
