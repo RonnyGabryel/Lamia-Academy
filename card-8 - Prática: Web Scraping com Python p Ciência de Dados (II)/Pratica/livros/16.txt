@@ -1,0 +1,5 @@
+Título: Olio
+Preço: Â£23.88
+Avaliação: 1 estrelas
+Status: Em estoque
+Link: http://books.toscrape.com/catalogue/catalogue/olio_984/index.html
