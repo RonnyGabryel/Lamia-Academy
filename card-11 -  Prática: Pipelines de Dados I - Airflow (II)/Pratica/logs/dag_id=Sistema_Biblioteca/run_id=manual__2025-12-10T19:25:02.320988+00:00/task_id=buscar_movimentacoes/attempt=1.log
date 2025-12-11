@@ -1,0 +1,17 @@
+[2025-12-10T19:25:14.359+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sistema_Biblioteca.buscar_movimentacoes manual__2025-12-10T19:25:02.320988+00:00 [queued]>
+[2025-12-10T19:25:14.416+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sistema_Biblioteca.buscar_movimentacoes manual__2025-12-10T19:25:02.320988+00:00 [queued]>
+[2025-12-10T19:25:14.420+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 3
+[2025-12-10T19:25:14.552+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): buscar_movimentacoes> on 2025-12-10 19:25:02.320988+00:00
+[2025-12-10T19:25:14.617+0000] {standard_task_runner.py:57} INFO - Started process 1451 to run task
+[2025-12-10T19:25:14.646+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Sistema_Biblioteca', 'buscar_movimentacoes', 'manual__2025-12-10T19:25:02.320988+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/biblioteca_pratica.py', '--cfg-path', '/tmp/tmp62rcvlyd']
+[2025-12-10T19:25:14.659+0000] {standard_task_runner.py:85} INFO - Job 35: Subtask buscar_movimentacoes
+[2025-12-10T19:25:14.971+0000] {task_command.py:415} INFO - Running <TaskInstance: Sistema_Biblioteca.buscar_movimentacoes manual__2025-12-10T19:25:02.320988+00:00 [running]> on host 76d90d8969c5
+[2025-12-10T19:25:15.237+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bibliotecario' AIRFLOW_CTX_DAG_ID='Sistema_Biblioteca' AIRFLOW_CTX_TASK_ID='buscar_movimentacoes' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T19:25:02.320988+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-10T19:25:02.320988+00:00'
+[2025-12-10T19:25:15.255+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-10T19:25:15.257+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', "echo 'Buscando empréstimos e devoluções do dia no banco de dados...'"]
+[2025-12-10T19:25:15.276+0000] {subprocess.py:86} INFO - Output:
+[2025-12-10T19:25:15.293+0000] {subprocess.py:93} INFO - Buscando empréstimos e devoluções do dia no banco de dados...
+[2025-12-10T19:25:15.298+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-10T19:25:15.341+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Sistema_Biblioteca, task_id=buscar_movimentacoes, execution_date=20251210T192502, start_date=20251210T192514, end_date=20251210T192515
+[2025-12-10T19:25:15.410+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-10T19:25:15.542+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

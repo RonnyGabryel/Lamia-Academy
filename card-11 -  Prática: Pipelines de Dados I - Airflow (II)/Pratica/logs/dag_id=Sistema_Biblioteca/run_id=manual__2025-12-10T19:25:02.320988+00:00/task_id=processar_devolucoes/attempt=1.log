@@ -1,0 +1,17 @@
+[2025-12-10T19:25:25.118+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sistema_Biblioteca.processar_devolucoes manual__2025-12-10T19:25:02.320988+00:00 [queued]>
+[2025-12-10T19:25:25.147+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sistema_Biblioteca.processar_devolucoes manual__2025-12-10T19:25:02.320988+00:00 [queued]>
+[2025-12-10T19:25:25.148+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 3
+[2025-12-10T19:25:25.201+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): processar_devolucoes> on 2025-12-10 19:25:02.320988+00:00
+[2025-12-10T19:25:25.217+0000] {standard_task_runner.py:57} INFO - Started process 1462 to run task
+[2025-12-10T19:25:25.228+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Sistema_Biblioteca', 'processar_devolucoes', 'manual__2025-12-10T19:25:02.320988+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/biblioteca_pratica.py', '--cfg-path', '/tmp/tmpwjo4s84n']
+[2025-12-10T19:25:25.235+0000] {standard_task_runner.py:85} INFO - Job 40: Subtask processar_devolucoes
+[2025-12-10T19:25:25.401+0000] {task_command.py:415} INFO - Running <TaskInstance: Sistema_Biblioteca.processar_devolucoes manual__2025-12-10T19:25:02.320988+00:00 [running]> on host 76d90d8969c5
+[2025-12-10T19:25:25.614+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bibliotecario' AIRFLOW_CTX_DAG_ID='Sistema_Biblioteca' AIRFLOW_CTX_TASK_ID='processar_devolucoes' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T19:25:02.320988+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-10T19:25:02.320988+00:00'
+[2025-12-10T19:25:25.617+0000] {logging_mixin.py:151} INFO - Processando devoluções recebidas hoje...
+[2025-12-10T19:25:25.619+0000] {logging_mixin.py:151} INFO - - Verificando estado de conservação dos livros
+[2025-12-10T19:25:25.620+0000] {logging_mixin.py:151} INFO - - Atualizando status para 'disponível'
+[2025-12-10T19:25:25.621+0000] {logging_mixin.py:151} INFO - Devoluções processadas com sucesso!
+[2025-12-10T19:25:25.622+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-12-10T19:25:25.655+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Sistema_Biblioteca, task_id=processar_devolucoes, execution_date=20251210T192502, start_date=20251210T192525, end_date=20251210T192525
+[2025-12-10T19:25:25.710+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-10T19:25:25.815+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

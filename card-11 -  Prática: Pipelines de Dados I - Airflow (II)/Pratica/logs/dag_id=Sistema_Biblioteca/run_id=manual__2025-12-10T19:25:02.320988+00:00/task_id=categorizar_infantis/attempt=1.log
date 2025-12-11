@@ -1,0 +1,16 @@
+[2025-12-10T19:25:21.799+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Sistema_Biblioteca.categorizar_infantis manual__2025-12-10T19:25:02.320988+00:00 [queued]>
+[2025-12-10T19:25:21.821+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Sistema_Biblioteca.categorizar_infantis manual__2025-12-10T19:25:02.320988+00:00 [queued]>
+[2025-12-10T19:25:21.830+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 3
+[2025-12-10T19:25:21.956+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): categorizar_infantis> on 2025-12-10 19:25:02.320988+00:00
+[2025-12-10T19:25:21.974+0000] {standard_task_runner.py:57} INFO - Started process 1459 to run task
+[2025-12-10T19:25:22.002+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Sistema_Biblioteca', 'categorizar_infantis', 'manual__2025-12-10T19:25:02.320988+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/biblioteca_pratica.py', '--cfg-path', '/tmp/tmpkzlljde7']
+[2025-12-10T19:25:22.030+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask categorizar_infantis
+[2025-12-10T19:25:22.349+0000] {task_command.py:415} INFO - Running <TaskInstance: Sistema_Biblioteca.categorizar_infantis manual__2025-12-10T19:25:02.320988+00:00 [running]> on host 76d90d8969c5
+[2025-12-10T19:25:22.773+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='bibliotecario' AIRFLOW_CTX_DAG_ID='Sistema_Biblioteca' AIRFLOW_CTX_TASK_ID='categorizar_infantis' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T19:25:02.320988+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-10T19:25:02.320988+00:00'
+[2025-12-10T19:25:22.783+0000] {logging_mixin.py:151} INFO - Processando empréstimos da categoria: infantis
+[2025-12-10T19:25:22.786+0000] {logging_mixin.py:151} INFO - - Total de livros infantis emprestados: simulando contagem...
+[2025-12-10T19:25:22.791+0000] {logging_mixin.py:151} INFO - - Verificando disponibilidade de infantis no acervo
+[2025-12-10T19:25:22.793+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-12-10T19:25:22.836+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=Sistema_Biblioteca, task_id=categorizar_infantis, execution_date=20251210T192502, start_date=20251210T192521, end_date=20251210T192522
+[2025-12-10T19:25:22.932+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-10T19:25:23.013+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
