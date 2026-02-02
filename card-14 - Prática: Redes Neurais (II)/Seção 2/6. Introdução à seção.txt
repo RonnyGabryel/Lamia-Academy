@@ -1,0 +1,15 @@
+Olá!
+
+Seja muito bem-vindo(a) a esta primeira parte do curso, na qual você aprenderá brevemente sobre a teoria das redes neurais artificiais e principalmente implementará passo a passo várias redes do tipo feed-forward aplicadas em vários cenários reais! Esta seção está dividida em cinco partes:
+
+Na primeira você terá uma breve introdução aos cálculos envolvidos no ajustes de pesos e/ou aprendizagem das redes neurais. Os conceitos são apresentados de maneira rápida e resumida, pois o foco do curso é mais voltado para as implementações práticas. Caso você queira mais detalhes sobre o funcionamento básico das redes neurais, sugiro o meu curso Redes Neurais Artificiais em Python, que mostra em muitos detalhes a teoria e também a implementação manual de uma rede neural
+
+Na segunda parte você aprenderá como trabalhar com problemas de classificação binária, nos quais nós temos duas classes para prever
+
+Na terceira parte você aprenderá como trabalhar com problemas de classificação quando existem mais de duas classes, pois a estrutura da rede neural é diferente da anterior
+
+Depois trabalharemos com regressão, que é uma técnica de machine learning para prever números. Utilizaremos uma base de dados de veículos usados e a ideia é prever o preço do veículo baseado em suas características
+
+Por fim, na última parte também abordaremos regressão, porém, faremos a previsão de três valores números que representam a venda de jogos de vídeo games em três regiões diferentes
+
+E para contextualizar esse tópico, a imagem abaixo mostra em laranja o seu progresso!
