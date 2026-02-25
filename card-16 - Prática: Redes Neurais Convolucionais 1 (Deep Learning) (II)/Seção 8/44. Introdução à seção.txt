@@ -1,0 +1,15 @@
+Olá, tudo certo?
+
+Seja muito bem-vindo(a) a segunda parte do curso, na qual você aprenderá sobre a teoria das redes neurais convolucionais e principalmente implementará passo a passo dois estudos de casos para classificação de imagens. Esta seção está dividida em três partes:
+
+Na primeira você aprenderá sobre a teoria das redes neurais convolucionais
+
+Na segunda parte você implementará passo a passo uma rede neural utilizando a base de dados MNIST para classificação de dígitos escritos a mão
+
+E por fim, na terceira parte você implementará uma rede neural convolucional para classificação de gatos e cachorros, o que dará todo o embasamento para você utilizar suas próprias imagens na construção de sistemas personalizados para identificação de imagens
+
+E para contextualizar esse tópico, a imagem abaixo mostra em laranja o seu progresso!
+
+Até e bons estudos :)
+
+Jones
