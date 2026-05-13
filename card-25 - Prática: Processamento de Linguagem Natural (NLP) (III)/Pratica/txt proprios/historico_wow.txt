@@ -1,0 +1,84 @@
+In this case I bring the strategy for the World First Kill of Heroic 25-man Lich King used by Paragon.
+
+Raid Composition:
+
+3 x Death Knight - 2 Frost, 1 Unholy
+4 x Druid - 1 Feral Tank, 2 Feral DPS, 1 Balance
+2 x Hunter - 2 Marksmanship
+5 x Paladin - 1 Protection, 2 Holy, 2 Retribution
+3 x Priest - 1 Shadow, 1 Holy, 1 Discipline
+3 x Rogue - 1 Assassination, 2 Combat
+1 x Shaman - 1 Restoration
+3 x Warlock - 1 Demonology, 2 Affliction
+1 x Warrior - 1 Fury
+
+Heroic 25-man Lich King Strategy – Exploding Spirits
+
+This is the strategy Paragon used for their first Lich King kill on 26.3.2010. That week we had the 5% healing, health, and damage buff active. Patch 3.3.3 was released the previous Wednesday. The patch gave DPS buffs to some classes, such as Frost DK and Boomkin, improved Priest shields, and added the 5% pet bonus.
+
+Encounter Base Statistics:
+
+Lich King: 103.9M Health Points (Dies at 10%)
+Val'kyr Shadowguard: 3M Health Points
+Raging Spirits: 4.1M Health Points
+Vile Spirits: Explode them
+
+The encounter has 3 different phases and 2 transitions, plus the Frostmourne Room during the final phase.
+
+PHASE 1
+
+In our kill attempt, 2 Shambling Horrors appeared. The Horrors and some Ghouls were tanked by a Protection Paladin, Lazeil. Sejta, a Feral Druid, tanked the Lich King and the remaining Ghouls.
+
+HORRORS, GHOULS, AND THE PLAGUE
+
+We spread the plague to Lazeil’s adds and he made sure the plague ended up on the Horrors. When necessary, Lazeil took Ghouls from Sejta to stack the plague. A Protection Paladin works perfectly for the Horrors because of Ardent Defender as an “oh-shit” cooldown and strong stuns. When Lazeil tanked two Horrors, he stunned them immediately after they cast Enrage. He also received stun support from a Retribution Paladin. When needed, he requested Pain Suppression from our Discipline Priest. The Enrage effect was removed by two Hunters. When the adds drop below 20% health they become enraged and begin hitting extremely hard. It is important that they die as quickly as possible once they start losing health.
+
+TRANSITION 1
+
+During the transition we spread out as efficiently as possible; melee players formed two groups to help healing. We always brought the Spirits to the tank. It is important to face the tank so the Spirits spawn in a good position for pickup. Our Druid tank Sejta turned the Raging Spirits toward the center so they could be moved in a straight line toward our Phase 2 position, where the Val’kyr phase begins. Two Hunters focused on Frozen Orbs while ranged DPS assisted with instant casts when necessary. Our Rogues and Hunters used at least one Tricks of the Trade or Misdirection on every Spirit because threat on those adds had to be extremely solid.
+
+PHASE 2 – VAL’KYRS
+
+POSITIONS
+
+In Phase 2 we positioned the entire raid directly on top of our marked Boomkin, Lappé. We started by moving the boss and the remaining Spirit to our first raid position. Usually the last Raging Spirit was at 5-10% health when the first wave of Val’kyrs appeared. It was absolutely crucial that the entire raid stood in exactly the same spot so the Val’kyrs would move in the exact same direction after grabbing their targets. The position also had to be far enough from the edge to maximize the time available to reduce the adds to 50% health.
+
+VAL’KYR STUNS
+
+Our tank Lazeil and our two Holy Paladins, Ilonie and Diamondtear, were assigned raid markers to stun the Val’kyrs using Hammer of Justice. Stunning them as quickly as possible was extremely important to keep them grouped together for cleave damage. If one of the Paladins was picked up, our two Retribution Paladins would replace them. After the 6-second stun ended, two Paladins used Holy Wrath. We also had three Rogues ready to use Kidney Shot if necessary. The mobs were slowed by an Unholy DK’s Desecration, Rogue Crippling Poison, and our Boomkin’s Typhoon.
+
+VAL’KYR TANKING
+
+When the Val’kyrs dropped below 50% health they released the player they carried, ascended into the air, and began casting ranged attacks. They generated threat, so we used a Retribution Paladin with Righteous Fury to gain threat on them. When they took flight, the Protection Paladin taunted them from the Retribution Paladin so their damage would be directed toward him. If the Val’kyrs had been allowed to attack freely they would have destroyed the Discipline Priest’s shields, making Infest impossible to heal.
+
+DEFILE
+
+We always tried to place Defile as far away from the throne and the raid as possible. Val’kyrs and Defile had different timers, so sometimes there was a lot of time before the next Defile and sometimes only one or two seconds.
+
+When Val’kyrs appeared immediately before Defile, our ranged DPS and healers waited for all three to land and then instantly moved a few steps away from the raid to place Defile as far away as possible. Melee attacked the Val’kyrs from the opposite side of the throne. If a melee player received Defile they moved away from the group while everyone else simply shifted closer to the throne.
+
+Obviously we kept the Lich King on top of the Val’kyrs at all times to maximize cleave damage. When we knew Defile would happen long before the next Val’kyrs, the raid stayed in place after killing the previous Val’kyrs and focused on maximizing boss damage until the next Defile. Defile was moved as far away from the next position as possible and everyone quickly relocated.
+
+INFEST HEALING
+
+We had a Discipline Priest, Jhazrun, shielding 20 targets for Infest. Our Death Knights used Anti-Magic Shell and the Warlocks used Shadow Protection if they did not receive a shield in order to reduce healing requirements. Our five Paladins rotated Aura Mastery to cover 5 out of every 6 Infests. When our Discipline Priest was taken by a Val’kyr, or when there was no Aura Mastery available, our three Priests helped with Divine Hymn.
+
+TRANSITION 2
+
+The second transition was identical to the first, except more Frozen Orbs appeared and there was one additional Raging Spirit, making four in total.
+
+PHASE 3
+
+When we entered the final phase the entire raid moved a few steps toward the opposite edge and heavily damaged the Spirits before the first Harvest Soul. Lazeil moved the Lich King a few steps away from the center in the opposite direction of the raid. During Harvest Soul the entire raid is stunned and takes damage, so everyone needed to remain above 60% health to avoid deaths.
+
+FROSTMOURNE ROOM
+
+Inside the Frostmourne Room the entire raid instantly stacked on our marked Death Knight, Synti, in the center of the room. He identified the area with the fewest bombs and guided the raid there. Bombs spawned everywhere in the room, but most appeared on top of players. By stacking everyone together we could move into a clean area while drawing a line of bombs behind us. The trick was ensuring the raid did not move too quickly so healers could recover the group and ranged DPS could kill the Spirits. Starfall was extremely effective for clearing Spirits, especially while standing in the middle of the room choosing a direction. Never allow a Spirit to reach the group and explode, and never let anyone die because the boss would grow in size and gain stacks if Frostmourne consumed a player’s soul.
+
+Once we exited the first Frostmourne Room, the Lich King immediately cast Defile. We simply spread away from everyone. After that, everyone except the Priests and Hunters instantly positioned behind the Raging Spirits being tanked near the edge. The Lich King summoned Vile Spirits on the opposite side of the room and was brought to the stack with the Raging Spirits.
+
+One of our Hunters placed a trap slightly in front of the group. The trap was triggered when the Lich King was brought to the raid. Our Retribution Paladin used Divine Shield and exploded the entire first wave of Spirits inside the trap as they flew directly toward the raid. It was crucial to keep the raid as tightly stacked as possible so the Spirits traveled to the same location. When Defile targeted someone in the group, that player instantly moved behind the raid while everyone else stepped closer to the boss and tank. If the Lich King tank received Defile he moved away from the raid and brought the boss back afterward. If anyone positioned themselves behind the group, the Spirits would not descend low enough and the designated exploder would fail, wiping the raid.
+
+Our Hunters and Priests stood on the sides of the room and used Feign Death and Fade when the Spirits activated to ensure every Spirit moved toward the boss. This allowed them to remain stationary and maximize their healing and damage. After the first wave exploded we usually had the Raging Spirits dead and could focus entirely on the boss. We used Bloodlust at the start of Phase 1 and again here during the second use. The boss summoned the second wave of Spirits and we moved him slightly toward the center while ranged players stayed still and attacked before the second Harvest Soul.
+
+Once we exited Frostmourne again we used our Protection Paladin to explode the next wave of Spirits. The idea was to move the raid across the room and explode the Spirits inside the trap placed in front of the raid.
