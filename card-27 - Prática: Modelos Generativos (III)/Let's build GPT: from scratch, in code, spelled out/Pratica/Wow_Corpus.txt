@@ -1,0 +1,256 @@
+INTRODUCTION
+Massively Multiplayer Online Role-Playing Games (MMORPGs) have developed into complex digital
+ecosystems where narrative depth and interactive engagement shape player experience. In these large virtual
+worlds, storytelling not only builds the world but also improves immersion, emotional involvement, and a sense
+of agency. Despite their potential, most MMORPGs stick to pre-written quest lines, fixed dialogue options, and
+scripted events that do not respond to player actions or the changing state of the game world. This static way of
+delivering narratives limits responsiveness and restricts player-driven storytelling. It often results in repetitive or
+uninteresting content in large environments. These issues highlight the need for more flexible and aware narrative
+systems that can showcase the richness of player interaction in real time.
+Recent advancements in large language models (LLMs) have opened new possibilities for natural language
+generation in interactive systems, particularly those requiring context sensitivity and narrative continuity. While
+LLMs such as GPT-based architectures have demonstrated impressive capabilities in dialogue generation, story
+synthesis, and text-based role-playing, their application within dynamic, multiplayer game environments remains
+underexplored. Existing implementations of narrative generation often focus on single-player or controlled
+sandbox settings, lacking the scalability and adaptability required for real-time interaction with multiple players
+in evolving game states. This study aims to investigate the integration of LLMs into an adaptive storytelling
+framework specifically designed for MMORPGs, addressing how such models can generate thematically
+coherent, lore-consistent, and contextually appropriate narratives in response to diverse player interactions.
+This study proposes a structured approach to integrating large language models into adaptive narrative systems
+within MMORPG environments. It focuses on the design and implementation of a storytelling framework based
+on a fine-tuned LLM trained on a comprehensive World of Warcraft (WoW) corpus, including thousands of quest
+narratives, dialogues, item descriptions, and lore texts. Unlike traditional rule-based or template-driven methods,
+our approach enables the generation of dynamic, context-aware narratives that respond to diverse player
+interactions. By simulating varied gameplay scenarios and narrative themes, the study explores how LLMs can
+support flexible story progression while maintaining coherence with game lore and thematic intent. In doing so,
+this work contributes a scalable methodology for deploying AI-driven storytelling systems in large-scale
+multiplayer contexts, bridging a gap between static content delivery and emergent narrative generation.
+The remainder of this paper is structured as follows. The next section presents the theoretical framework,
+reviewing key literature on narrative generation, adaptive storytelling, and the use of large language models in
+interactive systems. This is followed by the Method section, which details the data collection process,
+preprocessing steps, fine-tuning configuration, and evaluation design. The Results section reports the performance
+metrics of the model across multiple narrative dimensions and highlights key findings from expert assessments
+and user studies. In the final sections, the Conclusion summarizes the main contributions of the study, while the
+Discussion and Recommendations section offers a critical reflection on the limitations of the current approach
+and outlines directions for future research in AI-assisted storytelling within complex, multiplayer environments.
+1. RELATED WORKS
+Narrative systems in digital games have undergone significant evolution, from linear storytelling formats to more
+complex branching structures designed to simulate interactivity. Early implementations of game narratives
+typically followed fixed, pre-authored scripts that offered little variation or responsiveness to player actions.
+While branching dialogue trees and modular quest architectures introduced a degree of customization, they
+remained inherently limited in scalability and adaptability, especially in open-world or multiplayer contexts
+(Mateas & Stern, 2005; Aarseth, 2012). In many commercial game engines, narrative logic is still hardcoded into
+design frameworks, requiring extensive manual authoring and predefined decision paths. As a result, narrative
+design often becomes a bottleneck in delivering truly dynamic and player-driven story experiences, particularly
+in genres like MMORPGs where vast content and sustained engagement are required.
+
+Adaptive storytelling has evolved substantially with the integration of artificial intelligence, moving beyond
+traditional rule-based frameworks. Early systems
+such as drama managers and finite-state narrative engines
+provided limited interactivity and rigid dialogue capabilities (Riedl & Bulitko, 2013; Fairclough, 2004). More
+recent advances leverage generative AI to enhance real-time flexibility and personalization in game narratives.
+Ratican and Hutson (2024) introduced Adaptive Worlds, demonstrating how generative AI can dynamically tailor
+content to gameplay stimuli. Jeong and Lee (2025) proposed the LIGS framework, embedding GPT-style large
+language models into game systems to support emergent and context-sensitive narrative structures. Summers-
+Stay and Voss (2024) developed methods for branching and converging storylines in multiplayer environments,
+tackling a key challenge in collaborative narrative coherence. While these contributions signal a paradigm shift
+toward intelligent narrative systems, their applicability to large-scale MMORPG settings
+with demands for
+thematic consistency, lore fidelity, and multi-player responsiveness
+remains insufficiently explored.
+Large language models (LLMs) have become prominent tools in natural language generation tasks, including
+dialogue systems, story continuation, and character simulation. Models such as GPT-3 and its successors have
+demonstrated remarkable capabilities in generating coherent and contextually relevant text across a variety of
+domains (Brown et al., 2020; Radford et al., 2020). In the domain of interactive storytelling, Ammanabrolu et al.
+(2021) introduced techniques for fine-tuning LLMs on game-like text corpora, enabling dynamic narrative
+responses in fantasy role-playing settings. Similarly, Alabdulkarim et al. (2021) leveraged reinforcement learning
+to align model outputs with desired story structures, enhancing consistency and player relevance. Although LLMs
+have been tested in single-player and turn-based scenarios, their deployment in real-time, multiplayer contexts
+where interactions are asynchronous, overlapping, and semantically complex
+poses unique challenges. Issues
+such as character voice retention, lore fidelity, and thematic alignment become more pronounced when multiple
+users interact with a shared narrative space, an area that remains underrepresented in existing research (Urbanek
+et al., 2019).
+Despite the rapid progress in LLM-driven storytelling for single-player and turn-based games, significantly less
+attention has been devoted to large-scale, real-time multiplayer environments like MMORPGs. Systems such as
+NarrativeGenie demonstrate the potential for dynamic narrative sequencing in game-like contexts (Kumuran et
+al., 2024), while qualitative analyses point out the need for context-aware NPC dialogue and background lore
+integration (van der Torre, 2025). Still, these implementations predominantly target structured or text-based
+scenarios rather than persistent worlds shared by hundreds or thousands of players. Fundamental challenges
+such as maintaining character voice across simultaneous player interactions, ensuring lore fidelity under evolving
+game conditions, and achieving low-latency narrative responses
+remain largely unaddressed. This study situates
+itself within this understudied niche, aiming to investigate how fine-tuned LLMs can generate thematically
+consistent and responsive narratives in an active MMORPG setting based on a comprehensive World of Warcraft
+corpus.
+
+2. METHODOLOGY
+This study adopts a case study methodology to investigate the application of large language models (LLMs) in
+adaptive narrative generation within the context of a massively multiplayer online role-playing game
+(MMORPG). The experimental setting was designed around World of Warcraft (WoW), a well-established game
+universe with a rich narrative infrastructure and extensive player interaction dynamics. The objective was to
+evaluate how a fine-tuned LLM can generate thematically consistent and context-sensitive narratives in response
+to varied player inputs. To this end, a state-of-the-art open-source model, LLaMA 2 13B developed by Meta AI,
+was selected as the base architecture due to its balance between performance, adaptability, and computational
+efficiency for custom fine-tuning.
+The fine-tuning corpus was compiled from publicly available, officially licensed textual materials from the World
+of Warcraft (WoW) universe. The dataset consisted of approximately 1.2 million tokens in total, drawn from a
+wide range of narrative assets including 15,000 quest texts, 25,000 character dialogues, 3,500 item descriptions,
+
+
+and 800 lore documents. These materials were selected to capture the linguistic style, thematic structures, and
+world-specific terminology characteristic of the WoW narrative domain. Prior to training, the data underwent a
+multi-stage preprocessing pipeline, including the removal of duplicate entries, normalization of punctuation and
+formatting, and the contextual segmentation of long documents into coherent, semantically unified passages
+suitable for sequence-based fine-tuning. This process ensured both thematic integrity and syntactic consistency
+in the resulting training dataset.
+The selected model, LLaMA 2 13B by Meta AI, was fine-tuned using the preprocessed World of Warcraft corpus
+to align its generative capabilities with the stylistic and semantic expectations of the game world. The fine-tuning
+process was conducted using a learning rate of 2e-5 and a batch size of 16, over the course of 1,000 training
+epochs. Training was performed on high-performance GPU infrastructure to support large-batch gradient
+computation and to maintain stable convergence across extended training cycles. The choice of a relatively low
+learning rate and prolonged training duration was intended to allow the model to internalize subtle narrative
+conventions without overfitting to repetitive patterns. Throughout the training process, checkpoints were
+evaluated using held-out validation subsets to monitor coherence and overfitting behavior. The final model
+checkpoint was selected based on a balance of narrative fluency, consistency of style, and lore alignment in
+preliminary outputs.
+To assess the performance of the fine-tuned model in a simulated MMORPG environment, a set of 50 player
+interaction scenarios was constructed. These scenarios were designed to span 10 distinct narrative themes
+commonly encountered in role-playing game contexts, including combat, diplomacy, exploration, quest
+progression, moral choice, alliance formation, betrayal, world-building, conflict resolution, and character
+development. Each scenario prompted the model to generate narrative responses based on player input and
+situational cues. Evaluation was conducted using a mixed-methods approach combining expert annotation and
+user-based scoring. Thematic consistency and lore adherence were assessed by two domain experts with narrative
+design experience, while narrative coherence was rated on a 5-point Likert scale by 30 independent participants
+with familiarity in fantasy storytelling. Additionally, latency metrics were recorded for each response to evaluate
+real-time feasibility. This evaluation protocol was designed to reflect both subjective narrative quality and system-
+level performance constraints.
+3. RESULTS
+The training process was monitored over 1,000 epochs to track the convergence behavior of the LLaMA 2 13B
+model using the custom World of Warcraft corpus. As shown in Figure 1, both training and validation loss
+decreased consistently over time, indicating stable learning and effective generalization. The validation loss curve
+closely followed the training loss throughout the process, with no significant divergence, suggesting that the
+model did not overfit to the training data. Loss values plateaued at low levels after approximately 800 epochs,
+confirming convergence. This training behavior reflects that the model was able to internalize the structural and
+stylistic characteristics of the dataset while maintaining generalization performance.
+
+Figure 1: Epoch-wise convergence of training and validation loss during fine-tuning.
+The fine-tuned model also exhibited strong narrative performance across multiple thematic domains. Expert
+annotation of the generated outputs revealed an average thematic consistency of 87.3% across ten distinct
+narrative themes (see Figure 2). These themes included combat, diplomacy, exploration, quest progression,
+character development, and world events. The model demonstrated relatively uniform performance across these
+categories, suggesting its ability to adjust narrative tone and content appropriately based on contextual cues. This
+situations commonly encountered in MMORPG environments.
+
+Figure 2: Distribution of thematic consistency scores across predefined narrative categories.
+Narrative coherence was further assessed through a user study involving 30 participants familiar with fantasy
+gaming narratives. Each participant rated generated narrative segments on a 5-point Likert scale, evaluating
+logical flow, internal consistency, and structural completeness. As illustrated in Figure 3, the distribution of
+ratings was skewed toward higher scores, with the majority of responses receiving a rating of 4 or 5. The average
+coherence rating across all samples was 4.5, indicating that participants generally found the generated content to
+be well-
+narrative logic and progression over multi-sentence outputs, a key requirement for real-time storytelling systems
+in MMORPG environments.
+
+Figure 3: Participant ratings of narrative coherence on a 5-point Likert scale.
+Factual consistency with the established lore of the World of Warcraft universe was a key evaluation criterion.
+As shown in Figure 4, the model achieved a lore adherence accuracy of 92.1%, indicating a strong capacity to
+preserve canonical relationships, terminology, and event logic across generated narratives. Only 7% of the outputs
+contained factual inaccuracies, such as misattributed quests or incorrect references to in-game locations.
+Additionally, character voice issues
+where the tone or personality of iconic characters was not preserved
+were
+observed in less than 1% of the cases. These findings suggest that the model, when fine-tuned on thematically
+structured and curated data, can maintain both stylistic and factual fidelity to complex narrative worlds.
+Nevertheless, the presence of even minor deviations underscores the importance of integrating lightweight post-
+generation validation layers in deployment.
+
+Figure 4: Lore adherence accuracy and qualitative error categorization.
+System-level performance was evaluated by measuring the response generation latency across different narrative
+themes. As shown in Figure 5, the model maintained stable response times with an average latency of 480
+milliseconds and a standard deviation of
+scenarios. The distribution patterns reveal moderate variance across themes, but all values remained within sub-
+second bounds, indicating feasibility for real-time applications. Importantly, no major outliers or bottlenecks were
+
+
+This level of responsiveness confirms the practical viability of deploying the model in interactive gaming
+environments where timely narrative feedback is critical to sustaining immersion.
+
+Figure 5: Response generation latency segmented by narrative theme.
+across the evaluation scenarios. As visualized in Figure 6, the majority of responses (78%) were free from
+observable errors. Among the identified issues, 14% involved difficulties in preserving character-specific voice,
+such as deviations from established speech patterns or tone inconsistencies.
+
+Figure 6: Proportional distribution of generation errors by type.
+An additional 8% of cases contained factual inaccuracies, often involving incorrect references to lore-based events
+or relationships. Although these errors were not dominant, they highlight the sensitivity of narrative generation
+in high-context environments such as MMORPGs, where players are often attuned to subtle stylistic and factual
+cues. These findings emphasize the importance of incorporating optional post-processing mechanisms or
+lightweight real-time validation filters when deploying LLMs in live game systems.
+
+4. CONCLUSION
+This study explored the integration of large language models (LLMs), specifically LLaMA 2 13B, into the
+narrative generation pipeline of a massively multiplayer online role-playing game (MMORPG) environment. By
+fine-tuning on a domain-specific corpus comprising over 1.2 million tokens from World of Warcraft, the model
+demonstrated strong performance in multiple narrative quality metrics. Results indicate high thematic consistency
+across diverse narrative themes (87.3%), substantial narrative coherence as rated by participants (4.5/5), and
+strong adherence to in-universe lore (92.1%). Additionally, the average response generation latency of 480 ms
+suggests the feasibility of deploying such models in real-time multiplayer settings. These findings collectively
+ility to generate contextually relevant and immersive narratives while meeting the
+responsiveness demands of live game environments.
+Despite these promising results, several limitations remain. While the model maintained a high degree of lore
+fidelity, error analysis revealed challenges in preserving character-specific voice (14%) and factual consistency
+(8%). Furthermore, although the latency figures were within acceptable real-time thresholds, they may fluctuate
+under higher player loads or more complex interaction chains. Another constraint is the static nature of the fine-
+tuning corpus, which may limit adaptability to evolving narratives or user-generated content over time. These
+limitations underscore the need for ongoing model updates, hybrid retrieval-generation architectures, and context
+caching mechanisms to ensure sustained performance and narrative alignment in dynamic multiplayer
+environments.
+Future research should explore adaptive memory mechanisms and real-time context retrieval to further enhance
+narrative coherence and responsiveness in multiplayer settings. Integrating retrieval-augmented generation
+(RAG) pipelines with dynamically indexed lore databases could help sustain consistency as in-game events
+evolve. Additionally, incorporating reinforcement learning from human feedback (RLHF) tailored to thematic
+alignment and player satisfaction may further improve narrative quality. Expanding evaluation frameworks to
+include player sentiment analysis and longitudinal engagement metrics would also provide a deeper understanding
+of narrative impact. Overall, this study serves as a foundation for scalable, AI-driven storytelling systems in
+persistent online worlds.
+
+
+
+
+
+
+
+
+REFERENCES
+Aarseth, E. (2012). A narrative theory of games. In Proceedings of the International Conference on the
+Foundations of Digital Games (pp. 129 133).
+Alabdulkarim, A., Li, W., Martin, L. J., & Riedl, M. O. (2021). Goal-directed story generation: Augmenting
+generative language models with reinforcement learning. arXiv preprint arXiv:2112.08593.
+Ammanabrolu, P., Cheung, W., Tu, D., Broniec, W., & Riedl, M. (2020, October). Bringing stories alive:
+Generating interactive fiction worlds. In Proceedings of the AAAI Conference on Artificial Intelligence and
+Interactive Digital Entertainment (Vol. 16, No. 1, pp. 3-9).
+Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... & Amodei, D. (2020). Language models
+are few-shot learners. Advances in Neural Information Processing Systems, 33, 1877 1901.
+Fairclough, C. (2004). Story games and the OPIATE system (Doctoral dissertation, University of Dublin).
+Jeong, J., & Lee, T. Y. (2025). LIGS: Developing an LLM-infused game system for emergent narrative. In
+Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems (CHI EA
+
+
+Kumaran, V., Rowe, J., & Lester, J. (2024, November). NARRATIVEGENIE: generating narrative beats and
+dynamic storytelling with large language models. In Proceedings of the AAAI Conference on Artificial
+Intelligence and Interactive Digital Entertainment (Vol. 20, No. 1, pp. 76-86).
+Mateas, M., & Stern, A. (2005). Structuring content in the
+ interactive drama architecture. In Proceedings
+of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment 1(1), 93-98.
+Ratican, J., & Hutson, J. (2024). Adaptive Worlds: Generative AI in Game Design and Future of Gaming, and
+Interactive Media. ISRG Journal of Arts, Humanities and Social Sciences, 2(5).
+Riedl, M. O., & Bulitko, V. (2013). Interactive narrative: An intelligent systems approach. Ai Magazine, 34(1),
+67-67.
+Summers-Stay, D., & Voss, C. (2024, May). Generating Converging Narratives for Games with Large Language
+Models. In Proceedings of the 10th Workshop on Games and Natural Language Processing@ LREC-COLING
+2024 (pp. 43-60).
+Sweetser, P. (2024, July). Large language models and video games: A preliminary scoping review. In Proceedings
+of the 6th ACM Conference on Conversational User Interfaces (pp. 1-8).
+Urbanek, J., Fan, A., Karamcheti, S., Jain, S., Humeau, S., Dinan, E., ... & Weston, J. (2019). Learning to speak
+and act in a fantasy text adventure game. arXiv preprint arXiv:1903.03094.
